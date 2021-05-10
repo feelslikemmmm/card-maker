@@ -11,11 +11,34 @@ const Maker = ({ authService }) => {
       id: '1',
       name: 'feelslike',
       company: 'kakao',
+      theme: 'dark',
+      title: 'Software Engineer',
+      email: 'feelslikemmmm@gmail.com',
+      message: 'go for it',
+      fileName: 'feelslike',
+      fileURL: null,
+    },
+    {
+      id: '2',
+      name: 'feelslike2',
+      company: 'kakao',
       theme: 'light',
       title: 'Software Engineer',
       email: 'feelslikemmmm@gmail.com',
       message: 'go for it',
       fileName: 'feelslike',
+      fileURL: null,
+    },
+    {
+      id: '3',
+      name: 'feelslike3',
+      company: 'kakao',
+      theme: 'colorful',
+      title: 'Software Engineer',
+      email: 'feelslikemmmm@gmail.com',
+      message: 'go for it',
+      fileName: 'feelslike',
+      fileURL: null,
     },
   ]);
   const history = useHistory();
@@ -34,8 +57,8 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor />
-        <Preview />
+        <Editor cards={cards} />
+        <Preview cards={cards} />
       </div>
       <Footer />
     </section>
