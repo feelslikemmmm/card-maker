@@ -15,6 +15,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     authService.logout();
   }, [authService]);
 
+
   useEffect(() => {
     if (!userId) {
       return;
